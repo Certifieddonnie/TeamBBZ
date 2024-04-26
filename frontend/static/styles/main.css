@@ -22,6 +22,35 @@ body {
     position: relative;
     z-index: 2; /* Brings the content above the overlay */
   }
+
+  .navbar-default {
+    background-color: #56C7E1; /* Light blue, giving a calm and clean look */
+    border-color: #50BFC3; /* Slightly darker shade for the border */
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar-default .navbar-nav > li > a {
+    color: white; /* White text color */
+  }
+  
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+    color: #CCEFF5; /* Lighter blue on hover/focus for better interaction feedback */
+    background-color: transparent;
+  }
+  
+  .navbar-default .navbar-brand {
+    color: white;
+  }
+  
+  .navbar-toggle {
+    background-color: #50BFC3; /* Matches the border color */
+  }
+  
+  .icon-bar {
+    background-color: white;
+  }
+  
   
   .footer {
     position: absolute;
