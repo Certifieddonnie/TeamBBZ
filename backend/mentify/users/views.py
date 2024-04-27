@@ -35,7 +35,7 @@ def Doctor(request):
         role='Doctor'
     
     else:
-        role='Uknnown'
+        role='Unknown'
     return render(request,'doctor-registration.html')
 
 def Patient(request):
@@ -43,7 +43,7 @@ def Patient(request):
     if Patient.Objects.filter(user=user).exists():
         role='patient'
     else:
-        role='Uknowkm'
+        role='Unknow'
     return render(request,'patient-registration.html')
 
 def make_appointment(request):

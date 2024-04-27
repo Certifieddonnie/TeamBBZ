@@ -11,8 +11,7 @@
   <div class="container">
     <div class="card">
       <h1>MediMatch</h1>
-      <form action="{% url 'register'%}">
-        {% csrf_token %}
+      <form action="" method="POST">
         <input type="text" name="username" placeholder="Username" required>
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="password" placeholder="Password" required>
@@ -20,7 +19,7 @@
         <input type="date" name="dob" placeholder="Date of Birth" required>
         <input type="text" name="city" placeholder="City" required>
         <input type="text" name="state" placeholder="State" required>
-        <button type="submit">Register</button>
+        <button id= "mybutton" type="submit">Register</button>
         <div class="additional-links">
           <a href="./forgot-password.html">Forgot Password?</a>
           <a href="./login.html">Sign In</a>
@@ -28,6 +27,12 @@
       </form>
     </div>
   </div>
+  <script>
+    const form=document.querySelector('mybutton')
+    form.addEventListener('click',()=>{
+      alert('Registered Successfully')
+    })
+  </script
 </body>
 </html>
 
