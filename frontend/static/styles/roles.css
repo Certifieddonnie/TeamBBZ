@@ -3,7 +3,7 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #56C7E1, #6E45E1); /* gradient background */
+    background-color: #56C7E1;
   }
   
   .container {
@@ -26,43 +26,25 @@ body, html {
     text-align: center;
   }
   
-  form {
+  .user-type-selection {
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
   }
   
-  input, button {
-    display: block;
-    width: 100%;
+  .user-type-button {
+    width: 48%; /* Adjust button width */
     padding: 10px;
-    margin-top: 10px;
     border: none;
     border-radius: 5px;
-  }
-  
-  button {
     background-color: #56C7E1;
-    color: #fff;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    border: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
   }
   
-  button:hover {
-    background-color: #6E45E1;
-  }
-  .additional-links {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .additional-links a {
-    color: #56C7E1;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 0.9em;
-  }
-  
-  .additional-links a:hover {
-    text-decoration: underline;
+  .user-type-button:hover {
+    background-color: #449cb7; /* Slightly darker shade for hover effect */
   }
   

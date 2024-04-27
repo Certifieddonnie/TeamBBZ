@@ -3,7 +3,7 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #56C7E1, #6E45E1); /* gradient background */
+    background-color: #56C7E1;
   }
   
   .container {
@@ -43,26 +43,10 @@ body, html {
     background-color: #56C7E1;
     color: #fff;
     cursor: pointer;
-    border: none;
     transition: background-color 0.3s;
   }
   
   button:hover {
-    background-color: #6E45E1;
-  }
-  .additional-links {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .additional-links a {
-    color: #56C7E1;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 0.9em;
-  }
-  
-  .additional-links a:hover {
-    text-decoration: underline;
+    background-color: #449cb7;
   }
   
