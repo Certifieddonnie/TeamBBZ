@@ -2,11 +2,10 @@
 body {
     margin: 0;
     padding: 0;
-    background: url('../images/img1.jpg') no-repeat center center fixed; 
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-  }
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    position: relative;
+}  
   
   .overlay {
     position: absolute;
@@ -24,39 +23,176 @@ body {
   }
 
   .navbar-default {
-    background-color: #56C7E1; /* Light blue, giving a calm and clean look */
-    border-color: #50BFC3; /* Slightly darker shade for the border */
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #56C7E1 0%, #50BFC3 100%);
+    border: none;
   }
   
-  .navbar-default .navbar-nav > li > a {
-    color: white; /* White text color */
+  .navbar-brand img {
+    height: 30px; /* Adjust size accordingly */
+  }
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
   }
   
-  .navbar-default .navbar-nav > li > a:hover,
-  .navbar-default .navbar-nav > li > a:focus {
-    color: #CCEFF5; /* Lighter blue on hover/focus for better interaction feedback */
-    background-color: transparent;
+  .app-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 10px; /* Add some spacing between the logo and the app name */
   }
   
-  .navbar-default .navbar-brand {
-    color: white;
+  /* Keyframes for the 3D animation */
+@keyframes heroAnimation {
+    0% {
+      transform: translateZ(-20px);
+    }
+    50% {
+      transform: translateZ(20px);
+    }
+    100% {
+      transform: translateZ(-20px);
+    }
   }
   
-  .navbar-toggle {
-    background-color: #50BFC3; /* Matches the border color */
+  /* Apply animation to the hero section */
+  .hero {
+    height: 100vh;
+    background-image: url('../images/img1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: heroAnimation 5s infinite alternate; /* Apply animation */
   }
   
-  .icon-bar {
+  .hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  .hero p {
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 20px;
+  }
+  
+
+  @keyframes fadeInUp {
+    from {
+      transform: translate3d(0, 40px, 0);
+      opacity: 0;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+  
+  
+ /* Features Section */
+ .features {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+  }
+  
+
+  
+  .features-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .feature-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;  /* Adjust size as needed */
+    margin: 15px;
+    padding: 20px;
     background-color: white;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .feature-box:hover {
+    transform: scale(1.05);
+  }
+  
+  .feature-box img {
+    width: 100%;  /* Makes the image take the full width of the box */
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .action-button {
+    padding: 10px 20px;
+    color: white;  /* White text color */
+    background-color: #56C7E1;  /* The specific blue color */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-button:hover {
+    background-color: #449cb7;  /* Slightly darker shade for hover effect */
   }
   
   
-  .footer {
+  /* Sign-up Button */
+  .navbar-nav > li:last-child {
+    margin-left: 15px;
+  }
+  
+  .navbar-nav > li:last-child > a {
+    background-color: #fff;
+    color: #56C7E1;
+    border: 1px solid #56C7E1;
+    border-radius: 20px;
+    padding: 10px 20px;
+  }
+  
+  .navbar-nav > li:last-child > a:hover {
+    background-color: #56C7E1;
+    color: #fff;
+  }
+
+  
+    
+  /* Define pentagon shape using clip-path */
+  .hero::before {
+    content: '';
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(86, 199, 225, 0.2), rgba(80, 191, 195, 0.7)); /* Transparent gradient background */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 0 50%);
+  }
+  
+
+  .footer {
+    background-color: #DEF0F2;
+    color: #333;
     text-align: center;
     padding: 10px 0;
-  }
-  
+  }  
+  .feature-box img {
+    width: 200px;  /* Set a standard width */
+    height: 200px; /* Set a standard height */
+    border-radius: 50%; /* Keeps the circular design if desired */
+    object-fit: cover; /* Ensures the image covers the set dimensions without distorting */
+}
